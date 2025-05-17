@@ -22,7 +22,7 @@ const events = [
     title: "STEM Innovation Fair",
     date: "May 15, 2024",
     description: "Showcasing student projects in science and technology",
-    image: "https://images.unsplash.com/photo-1564069114553-7215e1ff1890?w=800"
+    image: "/images/STEM.png",
   }
 ];
 
