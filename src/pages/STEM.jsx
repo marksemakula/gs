@@ -10,7 +10,7 @@ const STEM = () => {
         animate={{ opacity: 1 }}
         className="relative h-[400px] bg-cover bg-center"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=1920')"
+          backgroundImage: "url('/images/blueboard.png')"
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50" />

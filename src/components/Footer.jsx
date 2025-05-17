@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">Good Shepherd School</h3>
+            <h3 className="text-xl font-bold mb-4">Good Shepherd School - Kawaala</h3>
             <p className="text-sm">Developing character strength and academic excellence since 2002.</p>
           </div>
           
@@ -28,10 +28,10 @@ const Footer = () => {
                 <FaMapMarkerAlt /> Kawaala, Lubaga North, Kampala, Uganda
               </li>
               <li className="flex items-center gap-2">
-                <FaPhone /> +256 XXX XXX XXX
+                <FaPhone /> +256 782 981 338
               </li>
               <li className="flex items-center gap-2">
-                <FaEnvelope /> info@goodshepherd.edu
+                <FaEnvelope /> info@goodshepherd.ac.ug
               </li>
             </ul>
           </div>

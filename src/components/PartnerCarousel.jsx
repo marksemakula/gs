@@ -4,23 +4,33 @@ import { motion } from 'framer-motion';
 const partners = [
   {
     id: 1,
-    name: "Partner 1",
-    logo: "https://via.placeholder.com/150?text=Partner+1"
+    name: "DHIS",
+    logo: "/images/dhis.svg"
   },
   {
     id: 2,
-    name: "Partner 2",
-    logo: "https://via.placeholder.com/150?text=Partner+2"
+    name: "MDLG",
+    logo: "/images/mdlg.png"
   },
   {
     id: 3,
-    name: "Partner 3",
-    logo: "https://via.placeholder.com/150?text=Partner+3"
+    name: "Stars Align",
+    logo: "/images/starsalign.png"
   },
   {
     id: 4,
-    name: "Partner 4",
-    logo: "https://via.placeholder.com/150?text=Partner+4"
+    name: "K Safaris",
+    logo: "/images/ksafaris.png"
+  },
+  {
+    id: 5,
+    name: "GOU",
+    logo: "/images/gou.png"
+  },
+  {
+    id: 6,
+    name: "Visit Uganda",
+    logo: "/images/visitug.png"
   }
 ];
 
@@ -55,7 +65,12 @@ const PartnerCarousel = () => {
                 src={partner.logo}
                 alt={partner.name}
                 className="w-32 h-32 object-contain"
+                onError={(e) => {
+                  e.target.onerror = null; 
+                  e.target.src = "https://via.placeholder.com/150?text=Partner+" + partner.id;
+                }}
               />
+              <p className="text-center mt-2 font-medium">{partner.name}</p>
             </motion.div>
           ))}
         </div>
