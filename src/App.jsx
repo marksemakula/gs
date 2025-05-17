@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -9,10 +9,12 @@ import Gallery from './pages/Gallery';
 import Donate from './pages/Donate';
 import STEM from './pages/STEM';
 import Events from './pages/Events';
+import ScrollToTop from './components/ScrollToTop'; // Import the new component
 
 function App() {
   return (
     <Router>
+      <ScrollToTop /> {/* Place this right after Router */}
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-grow">
