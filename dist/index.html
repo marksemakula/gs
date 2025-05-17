@@ -2,18 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Good Shepherd School - Kawaala" />
     <title>Good Shepherd School - Kawaala</title>
     
-    <!-- Add Urbanist Google Font -->
+    <!-- Favicon with fallback -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="icon" type="image/png" href="./favicon.png">
+    
+    <!-- Preconnect for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Urbanist Google Font with display=swap -->
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100..900&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/assets/index-20pj8ID6.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CWK6zHlr.css">
+    
+    <!-- Preload critical CSS -->
+    <script type="module" crossorigin src="./assets/index.CshKRQFA.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index.CWK6zHlr.css">
   </head>
   <body>
     <div id="root"></div>
+    <!-- Changed from absolute to relative path -->
+    
+    <!-- Fallback for non-JS users -->
+    <noscript>
+      <h1>Good Shepherd School - Kawaala</h1>
+      <p>Please enable JavaScript to view this website.</p>
+    </noscript>
   </body>
 </html>

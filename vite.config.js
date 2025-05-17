@@ -4,7 +4,7 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: './', // Changed from '/' to './' for better compatibility
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')
@@ -12,9 +12,26 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    sourcemap: true
+    emptyOutDir: true, // Cleans dist folder before build
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name].[hash].[ext]',
+        chunkFileNames: 'assets/[name].[hash].js',
+        entryFileNames: 'assets/[name].[hash].js'
+      }
+    }
   },
   server: {
-    historyApiFallback: true
+    historyApiFallback: true,
+    fs: {
+      strict: false // Allows serving from outside project root
+    }
+  },
+  css: {
+    modules: {
+      localsConvention: 'camelCase'
+    },
+    postcss: './postcss.config.js'
   }
 });
