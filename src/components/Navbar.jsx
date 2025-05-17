@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaBars, FaTimes, FaGraduationCap } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +32,12 @@ const Navbar = () => {
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
-              <FaGraduationCap className="h-10 w-10 text-primary" />
+              {/* Replaced FaGraduationCap with your logo image */}
+              <img 
+                src="/Good-shepherd-logo-black-and-white.png" 
+                alt="Good Shepherd School Logo"
+                className="h-10 w-10 object-contain" // Maintains original icon size
+              />
               <span className="ml-2 text-xl font-bold text-dark">Good Shepherd</span>
             </Link>
           </div>
