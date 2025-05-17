@@ -7,7 +7,7 @@ const blogPosts = [
     title: "Celebrating Excellence in STEM Education",
     date: "March 15, 2024",
     category: "Academic",
-    image: "https://images.unsplash.com/photo-1564069114553-7215e1ff1890?w=800",
+    image: "/images/STEM.png",
     excerpt: "Our students showcase innovative projects at the annual STEM fair..."
   },
   {
@@ -15,7 +15,7 @@ const blogPosts = [
     title: "Sports Day Highlights",
     date: "March 10, 2024",
     category: "Sports",
-    image: "https://images.unsplash.com/photo-1526676037777-05a232554f77?w=800",
+    image: "/images/gsskawaalasports.jpg",
     excerpt: "Annual sports day brings excitement and healthy competition..."
   },
   {
@@ -23,7 +23,7 @@ const blogPosts = [
     title: "Community Service Initiative",
     date: "March 5, 2024",
     category: "Community",
-    image: "https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800",
+    image: "/images/communitycleaning.jpg",
     excerpt: "Students lead environmental cleanup campaign in Kawaala..."
   }
 ];

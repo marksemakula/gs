@@ -11,31 +11,31 @@ const galleryItems = [
   {
     id: 2,
     category: "Sports",
-    image: "https://images.unsplash.com/photo-1526676037777-05a232554f77?w=800",
+    image: "/images/sportsday.jpg",
     caption: "Annual sports day"
   },
   {
     id: 3,
     category: "Events",
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800",
+    image: "/images/Celebrations.jpg",
     caption: "School celebrations"
   },
   {
     id: 4,
     category: "STEM",
-    image: "https://images.unsplash.com/photo-1564069114553-7215e1ff1890?w=800",
+    image: "/images/STEM2.jpg",
     caption: "Science fair projects"
   },
   {
     id: 5,
     category: "Arts",
-    image: "https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=800",
+    image: "/images/ART.jpg",
     caption: "Art exhibition"
   },
   {
     id: 6,
     category: "Events",
-    image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800",
+    image: "/images/graduation.jpg",
     caption: "Graduation ceremony"
   }
 ];
