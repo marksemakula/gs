@@ -31,7 +31,7 @@ const Footer = () => {
                 <FaPhone /> +256 782 981 338
               </li>
               <li className="flex items-center gap-2">
-                <FaEnvelope /> info@goodshepherd.ac.ug
+                <FaEnvelope /> admin@goodshepherd.ac.ug
               </li>
             </ul>
           </div>
@@ -48,7 +48,7 @@ const Footer = () => {
         
         <div className="mt-8 pt-8 border-t border-gray-700">
           <p className="text-center text-sm">
-            © {new Date().getFullYear()} Good Shepherd School - Kawaala. All rights reserved.
+            © {new Date().getFullYear()} Good Shepherd School - Kawaala | inzozi - inzozi.co . All rights reserved.
           </p>
         </div>
       </div>
