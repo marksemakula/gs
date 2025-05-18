@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import EventCarousel from '../components/EventCarousel';
 import PartnerCarousel from '../components/PartnerCarousel';
 import STEMPortal from '../components/STEMPortal';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -36,14 +37,20 @@ const Home = () => {
               >
                 Nurturing Excellence in Education Since 2002
               </motion.p>
-              <motion.button
+              <motion.div
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.6 }}
-                className="bg-primary text-dark px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition-colors"
               >
-                Learn More
-              </motion.button>
+                <Link 
+                  to="https://goodshepherd.ac.ug/about" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-primary text-dark px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition-colors"
+                >
+                  Learn More
+                </Link>
+              </motion.div>
             </div>
             
             {/* Logo - Right Side */}
