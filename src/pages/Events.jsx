@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Calendar from '../components/calendar/Calendar';
 import EventList from '../components/calendar/EventList';
+import Breadcrumb from '../components/Breadcrumb';
 
 const Events = () => {
   // Sample events data - in a real application, this would come from an API
@@ -37,7 +38,12 @@ const Events = () => {
   ]);
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <div className="min-h-screen bg-gray-50">
+      <Breadcrumb crumbs={[
+        { name: 'Home', href: '/' },
+        { name: 'School Events and Calendar', href: '/events' },
+      ]} />
+      <div className="py-12">
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -68,6 +74,7 @@ const Events = () => {
             <EventList events={events} />
           </motion.div>
         </div>
+      </div>
       </div>
     </div>
   );

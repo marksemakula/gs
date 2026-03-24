@@ -3,32 +3,167 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Good Shepherd School - Kawaala" />
-    <title>Good Shepherd School - Kawaala</title>
-    
+    <meta name="description" content="Good Shepherd School - Kawaala, Uganda. Quality education rooted in faith, character, and academic excellence since 2002. Enroll today." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.goodshepherd.ac.ug/" />
+    <title>Good Shepherd School – Kawaala, Kampala Uganda</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.goodshepherd.ac.ug/" />
+    <meta property="og:title" content="Good Shepherd School – Kawaala, Kampala Uganda" />
+    <meta property="og:description" content="Quality education rooted in faith, character, and academic excellence since 2002." />
+    <meta property="og:image" content="https://www.goodshepherd.ac.ug/Good-shepherd-logo-black-and-white.png" />
+
     <!-- Favicon with fallback -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" href="/favicon.png">
-    
+
     <!-- Preconnect for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- Urbanist Google Font with display=swap -->
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100..900&display=swap" rel="stylesheet">
-    
+
     <!-- Preload critical CSS -->
     <link rel="stylesheet" href="/src/index.css" as="style">
+
+    <!-- ─── Structured Data: Organisation ─────────────────────────── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "@id": "https://www.goodshepherd.ac.ug/#organization",
+      "name": "Good Shepherd School – Kawaala",
+      "alternateName": "Good Shepherd School",
+      "url": "https://www.goodshepherd.ac.ug",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.goodshepherd.ac.ug/Good-shepherd-logo-black-and-white.png"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kawaala, Lubaga North",
+        "addressLocality": "Kampala",
+        "addressCountry": "UG"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+256-782-981-338",
+        "email": "admin@goodshepherd.ac.ug",
+        "contactType": "admissions"
+      }
+    }
+    </script>
+
+    <!-- ─── Structured Data: WebSite + SitelinksSearchBox ─────────── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://www.goodshepherd.ac.ug/#website",
+      "name": "Good Shepherd School – Kawaala",
+      "url": "https://www.goodshepherd.ac.ug",
+      "publisher": {
+        "@id": "https://www.goodshepherd.ac.ug/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.goodshepherd.ac.ug/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- ─── Structured Data: SiteLinks (WebPage list) ─────────────── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Good Shepherd School – Site Navigation",
+      "itemListElement": [
+        {
+          "@type": "SiteLinksSearchBox",
+          "url": "https://www.goodshepherd.ac.ug"
+        },
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "About Good Shepherd School",
+          "url": "https://www.goodshepherd.ac.ug/about"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "STEM Education Programme",
+          "url": "https://www.goodshepherd.ac.ug/stem"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "School Events and Calendar",
+          "url": "https://www.goodshepherd.ac.ug/events"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Blog and School News",
+          "url": "https://www.goodshepherd.ac.ug/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Photo Gallery",
+          "url": "https://www.goodshepherd.ac.ug/gallery"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Enroll Your Child",
+          "url": "https://www.goodshepherd.ac.ug/enroll"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Donate or Become a Partner",
+          "url": "https://www.goodshepherd.ac.ug/donate"
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
-    <!-- Changed from absolute to relative path -->
     <script type="module" src="./src/main.jsx"></script>
-    
-    <!-- Fallback for non-JS users -->
+
+    <!-- ─── Fallback navigation for users without JavaScript ──────── -->
     <noscript>
-      <h1>Good Shepherd School - Kawaala</h1>
-      <p>Please enable JavaScript to view this website.</p>
+      <style>
+        .ns-nav { font-family: sans-serif; background: #1a1a2e; padding: 1rem 2rem; }
+        .ns-nav h1 { color: #fff; margin: 0 0 .5rem; font-size: 1.4rem; }
+        .ns-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; }
+        .ns-nav a { color: #e0e0e0; text-decoration: none; font-size: .95rem; }
+        .ns-nav a:hover { text-decoration: underline; }
+        .ns-msg { font-family: sans-serif; padding: 2rem; color: #555; }
+      </style>
+      <nav class="ns-nav" role="navigation" aria-label="Main navigation (no-JavaScript fallback)">
+        <h1>Good Shepherd School – Kawaala</h1>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/stem">STEM Education</a></li>
+          <li><a href="/events">School Events</a></li>
+          <li><a href="/blog">Blog &amp; News</a></li>
+          <li><a href="/gallery">Gallery</a></li>
+          <li><a href="/enroll">Enroll</a></li>
+          <li><a href="/donate">Donate</a></li>
+        </ul>
+      </nav>
+      <p class="ns-msg">Please enable JavaScript to view the full website.</p>
     </noscript>
   </body>
 </html>

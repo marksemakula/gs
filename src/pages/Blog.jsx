@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import Breadcrumb from '../components/Breadcrumb';
 
 const blogPosts = [
   {
@@ -36,7 +37,12 @@ const Blog = () => {
     : blogPosts.filter(post => post.category.toLowerCase() === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <div className="min-h-screen bg-gray-50">
+      <Breadcrumb crumbs={[
+        { name: 'Home', href: '/' },
+        { name: 'Blog and School News', href: '/blog' },
+      ]} />
+      <div className="py-12">
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -100,6 +106,7 @@ const Blog = () => {
             </motion.article>
           ))}
         </div>
+      </div>
       </div>
     </div>
   );

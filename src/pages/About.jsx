@@ -1,9 +1,14 @@
 import { motion } from 'framer-motion';
 import { FaGraduationCap, FaCross, FaUsers } from 'react-icons/fa';
+import Breadcrumb from '../components/Breadcrumb';
 
 const About = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <Breadcrumb crumbs={[
+        { name: 'Home', href: '/' },
+        { name: 'About Good Shepherd School', href: '/about' },
+      ]} />
       {/* Hero Section */}
       <motion.section
         initial={{ opacity: 0 }}

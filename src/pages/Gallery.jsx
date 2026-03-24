@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import Breadcrumb from '../components/Breadcrumb';
 
 const galleryItems = [
   {
@@ -51,7 +52,12 @@ const Gallery = () => {
   const categories = ['all', ...new Set(galleryItems.map(item => item.category.toLowerCase()))];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <div className="min-h-screen bg-gray-50">
+      <Breadcrumb crumbs={[
+        { name: 'Home', href: '/' },
+        { name: 'Photo Gallery', href: '/gallery' },
+      ]} />
+      <div className="py-12">
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -135,8 +141,7 @@ const Gallery = () => {
             </motion.div>
           </motion.div>
         )}
-      </div>
-    </div>
+      </div>      </div>    </div>
   );
 };
 

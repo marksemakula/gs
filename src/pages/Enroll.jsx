@@ -1,9 +1,15 @@
 import { motion } from 'framer-motion';
 import EnrollmentForm from '../components/enrollment/EnrollmentForm';
+import Breadcrumb from '../components/Breadcrumb';
 
 const Enroll = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <div className="min-h-screen bg-gray-50">
+      <Breadcrumb crumbs={[
+        { name: 'Home', href: '/' },
+        { name: 'Enroll Your Child', href: '/enroll' },
+      ]} />
+      <div className="py-12">
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -25,6 +31,7 @@ const Enroll = () => {
         >
           <EnrollmentForm />
         </motion.div>
+      </div>
       </div>
     </div>
   );

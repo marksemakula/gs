@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import DonationOptions from '../components/donation/DonationOptions';
 import DonationForm from '../components/donation/DonationForm';
 import PartnershipForm from '../components/donation/PartnershipForm';
+import Breadcrumb from '../components/Breadcrumb';
 
 const Donate = () => {
   const [view, setView] = useState('options'); // options, donate, partner
@@ -16,7 +17,12 @@ const Donate = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <div className="min-h-screen bg-gray-50">
+      <Breadcrumb crumbs={[
+        { name: 'Home', href: '/' },
+        { name: 'Donate or Become a Partner', href: '/donate' },
+      ]} />
+      <div className="py-12">
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -62,6 +68,7 @@ const Donate = () => {
         {view === 'partner' && (
           <PartnershipForm />
         )}
+      </div>
       </div>
     </div>
   );

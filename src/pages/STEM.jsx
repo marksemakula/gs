@@ -1,9 +1,14 @@
 import { motion } from 'framer-motion';
 import STEMPortal from '../components/STEMPortal';
+import Breadcrumb from '../components/Breadcrumb';
 
 const STEM = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <Breadcrumb crumbs={[
+        { name: 'Home', href: '/' },
+        { name: 'STEM Education Programme', href: '/stem' },
+      ]} />
       {/* Hero Section */}
       <motion.section
         initial={{ opacity: 0 }}

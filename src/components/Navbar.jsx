@@ -27,7 +27,11 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`bg-white sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'shadow-md' : 'shadow-sm'}`}>
+    <nav
+      role="navigation"
+      aria-label="Main navigation"
+      className={`bg-white sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'shadow-md' : 'shadow-sm'}`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex items-center">
@@ -43,11 +47,12 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8" role="menubar" aria-label="Site pages">
             {navItems.map((item) => (
               <Link
                 key={item.title}
                 to={item.path}
+                role="menuitem"
                 className="text-dark hover:text-secondary font-medium transition-colors"
               >
                 {item.title}
