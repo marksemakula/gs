@@ -46,10 +46,14 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="mt-8 pt-8">
-          <p className="text-center text-sm">
+        <div className="mt-8 pt-8 flex flex-wrap items-center justify-center gap-4">
+          <p className="text-sm">
             © {new Date().getFullYear()} Good Shepherd School - Kawaala | inzozi - inzozi.co . All rights reserved.
           </p>
+          <div className="flex items-center gap-2">
+            <span className="text-gray-300 text-sm">Powered by</span>
+            <img src="/images/Inzozi-grayscale.png" alt="Inzozi Logo" className="h-10 w-auto" />
+          </div>
         </div>
       </div>
     </footer>
