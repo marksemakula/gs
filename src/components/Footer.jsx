@@ -46,7 +46,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="mt-8 pt-8 border-t border-gray-700">
+        <div className="mt-8 pt-8">
           <p className="text-center text-sm">
             © {new Date().getFullYear()} Good Shepherd School - Kawaala | inzozi - inzozi.co . All rights reserved.
           </p>
