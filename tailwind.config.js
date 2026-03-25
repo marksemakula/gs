@@ -13,7 +13,7 @@ export default {
         dark: '#393939',
       },
       fontFamily: {
-        sans: ['Urbanist', 'sans-serif'], // Changed from Inter to Urbanist
+        sans: ['Comic Neue', 'cursive'],
       }
     },
   },

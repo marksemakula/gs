@@ -1,5 +1,30 @@
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaTwitter, FaInstagram, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import {
+  FaSquareFacebook,
+  FaSquareInstagram,
+  FaSquareYoutube,
+  FaSquareXTwitter,
+  FaTelegram,
+  FaTiktok,
+  FaDiscord,
+  FaSlack,
+  FaWhatsapp,
+  FaLinkedin,
+} from 'react-icons/fa6';
+
+const socials = [
+  { icon: FaSquareFacebook, label: "Facebook",  href: "#" },
+  { icon: FaSquareInstagram, label: "Instagram", href: "#" },
+  { icon: FaSquareYoutube,  label: "YouTube",   href: "#" },
+  { icon: FaSquareXTwitter, label: "X",         href: "#" },
+  { icon: FaTelegram,       label: "Telegram",  href: "#" },
+  { icon: FaTiktok,         label: "TikTok",    href: "#" },
+  { icon: FaDiscord,        label: "Discord",   href: "#" },
+  { icon: FaSlack,          label: "Slack",     href: "#" },
+  { icon: FaWhatsapp,       label: "WhatsApp",  href: "#" },
+  { icon: FaLinkedin,       label: "LinkedIn",  href: "#" },
+];
 
 const Footer = () => {
   return (
@@ -38,10 +63,18 @@ const Footer = () => {
           
           <div>
             <h3 className="text-xl font-bold mb-4">Follow Us</h3>
-            <div className="flex space-x-4">
-              <a href="#" className="hover:text-primary"><FaFacebook size={24} /></a>
-              <a href="#" className="hover:text-primary"><FaTwitter size={24} /></a>
-              <a href="#" className="hover:text-primary"><FaInstagram size={24} /></a>
+            <div className="flex flex-wrap gap-3">
+              {socials.map(({ icon: Icon, label, href }) => (
+                <a
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  title={label}
+                  className="hover:text-primary transition-colors duration-200"
+                >
+                  <Icon size={28} />
+                </a>
+              ))}
             </div>
           </div>
         </div>
