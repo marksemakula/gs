@@ -63,6 +63,8 @@ const Calendar = ({ events }) => {
         {daysInMonth.map((day, idx) => {
           const dayEvents = getEventsForDate(day);
           const isCurrentMonth = isSameMonth(day, currentDate);
+          const hasHoliday = dayEvents.some(e => e.category === 'Public Holiday');
+          const hasSchoolEvent = dayEvents.some(e => e.category !== 'Public Holiday');
           
           return (
             <motion.button
@@ -73,17 +75,28 @@ const Calendar = ({ events }) => {
               className={`
                 relative p-2 h-20 rounded-lg border transition-colors
                 ${isCurrentMonth ? 'text-gray-900' : 'text-gray-400'}
-                ${dayEvents.length > 0 ? 'bg-primary bg-opacity-10' : ''}
+                ${hasHoliday ? 'bg-green-50' : hasSchoolEvent ? 'bg-primary bg-opacity-10' : ''}
                 hover:border-primary
               `}
             >
               <span className="text-sm">{format(day, 'd')}</span>
               {dayEvents.length > 0 && (
-                <div className="absolute bottom-2 left-2 right-2">
-                  <div className="text-xs bg-primary text-dark px-1 py-0.5 rounded truncate">
-                    {dayEvents[0].title}
-                    {dayEvents.length > 1 && ` +${dayEvents.length - 1}`}
-                  </div>
+                <div className="absolute bottom-2 left-2 right-2 space-y-0.5">
+                  {dayEvents.slice(0, 2).map((ev, i) => (
+                    <div
+                      key={i}
+                      className={`text-xs px-1 py-0.5 rounded truncate ${
+                        ev.category === 'Public Holiday'
+                          ? 'bg-green-200 text-green-900'
+                          : 'bg-primary text-dark'
+                      }`}
+                    >
+                      {ev.title}
+                    </div>
+                  ))}
+                  {dayEvents.length > 2 && (
+                    <div className="text-xs text-gray-500 pl-1">+{dayEvents.length - 2} more</div>
+                  )}
                 </div>
               )}
             </motion.button>

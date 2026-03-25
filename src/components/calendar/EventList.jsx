@@ -34,7 +34,11 @@ const EventList = ({ events }) => {
                 </div>
               </div>
               {event.category && (
-                <span className="bg-primary bg-opacity-10 text-dark px-3 py-1 rounded-full text-sm">
+                <span className={`px-3 py-1 rounded-full text-sm ${
+                  event.category === 'Public Holiday'
+                    ? 'bg-green-100 text-green-800'
+                    : 'bg-primary bg-opacity-10 text-dark'
+                }`}>
                   {event.category}
                 </span>
               )}
