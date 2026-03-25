@@ -50,7 +50,6 @@ const PartnerCarousel = () => {
   return (
     <div className="bg-gray-100 py-12">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Our Partners</h2>
         
         <div className="flex justify-center items-center gap-8 flex-wrap">
           {partners.map((partner, index) => (
@@ -59,7 +58,6 @@ const PartnerCarousel = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2 }}
-              className="bg-white p-4 rounded-lg shadow-md"
             >
               <img
                 src={partner.logo}
