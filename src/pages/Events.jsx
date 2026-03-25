@@ -60,6 +60,21 @@ const nextOccurrence = (month, day, hour = 8) => {
   return candidate.toISOString();
 };
 
+// Uganda MoES Term 2 reopening: first Monday of June each year
+const getNextTerm2Date = () => {
+  const now = new Date();
+  const tryYear = (y) => {
+    // Find first Monday of June in year y
+    const june1 = new Date(y, 5, 1, 8, 0, 0);
+    const dayOfWeek = june1.getDay(); // 0=Sun,1=Mon,...
+    const daysUntilMonday = dayOfWeek === 1 ? 0 : (8 - dayOfWeek) % 7;
+    return new Date(y, 5, 1 + daysUntilMonday, 8, 0, 0);
+  };
+  let date = tryYear(now.getFullYear());
+  if (date <= now) date = tryYear(now.getFullYear() + 1);
+  return date.toISOString();
+};
+
 const Events = () => {
   const now = new Date();
   const year = now.getFullYear();
@@ -74,8 +89,8 @@ const Events = () => {
   const schoolEvents = [
     {
       title: "Term 2 Reporting Day",
-      description: "Students report back for Term 2 academic session",
-      date: nextOccurrence(4, 15, 8),
+      description: "Students report back for Term 2 academic session (MoES Term 2 opening – first Monday of June)",
+      date: getNextTerm2Date(),
       location: "School Campus",
       category: "Academic",
     },
