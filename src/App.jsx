@@ -10,11 +10,13 @@ import Donate from './pages/Donate';
 import STEM from './pages/STEM';
 import Events from './pages/Events';
 import ScrollToTop from './components/ScrollToTop'; // Import the new component
+import SeoManager from './components/SeoManager';
 
 function App() {
   return (
     <Router>
       <ScrollToTop /> {/* Place this right after Router */}
+      <SeoManager />
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-grow">
